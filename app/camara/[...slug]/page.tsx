@@ -2,7 +2,6 @@ import JsonViewerComponent from '@/components/JsonViewer';
 
 async function getData(url: string) {
   const response = await fetch(url);
-  // await new Promise(r => setTimeout(r, 200000));
   const data = await response.json();
   return data;
 }
