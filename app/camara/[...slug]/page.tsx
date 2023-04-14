@@ -10,12 +10,22 @@ async function getData(url: string) {
   return data;
 }
 
-function objectToQueryParams(obj: { [key: string]: any } | undefined): string {
+function objectToQueryParams(obj: { [key: string]: any } | undefined, url: string): string {
   if (!obj) {
     return '';
   }
   const keys = Object.keys(obj);
   const params = keys.map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(obj[key])}`);
+
+  const lastPath = url.split('/').pop(); // extrai o último caminho da URL
+
+  if (lastPath && obj['slug'] === lastPath) {
+    const slugIndex = params.findIndex((param) => param.startsWith('slug='));
+    if (slugIndex !== -1) {
+      params.splice(slugIndex, 1);
+    }
+  }
+
   return params.join('&');
 }
 
@@ -26,9 +36,9 @@ export default async function Page({
   params: { slug: string[] };
   searchParams?: { [key: string]: any };
 }) {
-  const queryParams = objectToQueryParams(searchParams);
-  const url = `https://dadosabertos.camara.leg.br/api/v2/${params.slug?.join('/')}?${queryParams}`;
-  const data = await getData(url);
+  const url = `https://dadosabertos.camara.leg.br/api/v2/${params.slug?.join('/')}`;
+  const queryParams = objectToQueryParams(searchParams, url);
+  const data = await getData(`${url}?${queryParams}`);
 
   return <JsonViewerComponent data={data} url={url} />;
 }
