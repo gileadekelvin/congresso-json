@@ -31,11 +31,6 @@ export default function Home() {
               <Link href={'/camara/orgaos/180'}>/camara/orgaos/180</Link>
             </li>
             <li className='underline'>
-              <Link href={'/camara/deputados?idLegislatura=57'}>
-                /camara/deputados?idLegislatura=57
-              </Link>
-            </li>
-            <li className='underline'>
               <Link href={'/senado/materia/143611'}>/senado/materia/143611</Link>
             </li>
           </ul>
