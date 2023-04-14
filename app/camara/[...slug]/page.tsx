@@ -38,7 +38,8 @@ export default async function Page({
 }) {
   const url = `https://dadosabertos.camara.leg.br/api/v2/${params.slug?.join('/')}`;
   const queryParams = objectToQueryParams(searchParams, url);
-  const data = await getData(`${url}?${queryParams}`);
+  const urlWithParams = `${url}?${queryParams}`;
+  const data = await getData(urlWithParams);
 
-  return <JsonViewerComponent data={data} url={url} />;
+  return <JsonViewerComponent data={data} url={urlWithParams} />;
 }
