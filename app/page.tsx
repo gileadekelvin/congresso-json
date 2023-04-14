@@ -30,6 +30,11 @@ export default function Home() {
             <li className='underline'>
               <Link href={'/camara/orgaos/180'}>/camara/orgaos/180</Link>
             </li>
+            <li className='underline'>
+              <Link href={'/camara/deputados?idLegislatura=57'}>
+                /camara/deputados?idLegislatura=57
+              </Link>
+            </li>
           </ul>
           <p className='text-gray-700'>
             Todo endpoint da{' '}
