@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Câmara | congresso.json',
+  title: 'Senado | congresso.json',
   description: 'Veja a API do Congresso nacional em json',
 };
 

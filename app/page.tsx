@@ -35,6 +35,9 @@ export default function Home() {
                 /camara/deputados?idLegislatura=57
               </Link>
             </li>
+            <li className='underline'>
+              <Link href={'/senado/materia/143611'}>/senado/materia/143611</Link>
+            </li>
           </ul>
           <p className='text-gray-700'>
             Todo endpoint da{' '}
@@ -46,12 +49,22 @@ export default function Home() {
               versão 2 dos dados abertos da Câmara
             </a>{' '}
             funciona. Basta substituir{' '}
-            <span className='font-medium text-blue-500'>
-              https://dadosabertos.camara.leg.br/api/v2/
-            </span>{' '}
+            <span className='font-medium text-blue-500'>dadosabertos.camara.leg.br/api/v2/</span>{' '}
             por <span className='font-medium text-blue-500'>congresso-json.vercel.app/camara/</span>
           </p>
-          <p className='text-gray-800'>A API do Senado será disponibilizada em breve!</p>
+          <p className='text-gray-700'>
+            Todo endpoint listado{' '}
+            <a
+              className='underline'
+              href='https://legis.senado.leg.br/dadosabertos/docs/ui/index.html#/ListaSenadorService/listaSenadoresXml'
+              target='_blank'
+            >
+              no web service dos dados abertos do Senado
+            </a>{' '}
+            funciona. Basta substituir{' '}
+            <span className='font-medium text-blue-500'>legis.senado.leg.br/dadosabertos/</span> por{' '}
+            <span className='font-medium text-blue-500'>congresso-json.vercel.app/senado/</span>
+          </p>
         </div>
       </div>
     </main>
