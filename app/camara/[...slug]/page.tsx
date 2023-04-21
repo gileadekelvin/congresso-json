@@ -15,7 +15,14 @@ function objectToQueryParams(obj: { [key: string]: any } | undefined): string {
     return '';
   }
   const keys = Object.keys(obj);
-  const params = keys.map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(obj[key])}`);
+  const params = keys
+    .map((key) => {
+      if (key !== 'slug') {
+        return `${encodeURIComponent(key)}=${encodeURIComponent(obj[key])}`;
+      }
+      return null;
+    })
+    .filter((k) => !!k);
   return params.join('&');
 }
 
