@@ -39,7 +39,6 @@ export default async function Page({
 }) {
   const queryParams = objectToQueryParams(searchParams);
   const url = `https://legis.senado.leg.br/dadosabertos/${params.slug?.join('/')}.json${queryParams}`;
-  console.log(url);
   const data = await getData(url);
 
   return <JsonViewerComponent data={data} url={url} />;
