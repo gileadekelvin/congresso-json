@@ -6,6 +6,7 @@ async function getData(url: string) {
       'Content-Type': 'application/json',
     },
   });
+  console.log(JSON.stringify(response));
   const data = await response.json();
   return data;
 }
