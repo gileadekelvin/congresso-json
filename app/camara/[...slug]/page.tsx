@@ -1,6 +1,7 @@
 import JsonViewerComponent from '@/components/JsonViewer';
 
 async function getData(url: string) {
+  console.log('ops')
   const response = await fetch(url, {
     headers: {
       'Content-Type': 'application/json',
