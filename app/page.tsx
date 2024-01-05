@@ -22,6 +22,12 @@ export default function Home() {
           <h3 className='text-xl font-medium'>Exemplos</h3>
           <ul className='max-w-xl list-inside list-disc space-y-1 text-gray-500 dark:text-gray-400'>
             <li className='underline'>
+              <Link href={'/senado/materia/143611'}>/senado/materia/143611</Link>
+            </li>
+            <li className='underline'>
+              <Link href={'/senado/senador/lista/atual'}>/senado/senador/lista/atual</Link>
+            </li>
+            <li className='underline'>
               <Link href={'/camara/proposicoes/2192459'}>/camara/proposicoes/2192459</Link>
             </li>
             <li className='underline'>
@@ -34,12 +40,6 @@ export default function Home() {
             </li>
             <li className='underline'>
               <Link href={'/camara/orgaos/180'}>/camara/orgaos/180</Link>
-            </li>
-            <li className='underline'>
-              <Link href={'/senado/materia/143611'}>/senado/materia/143611</Link>
-            </li>
-            <li className='underline'>
-              <Link href={'/senado/senador/lista/atual'}>/senado/senador/lista/atual</Link>
             </li>
           </ul>
           <p className='text-gray-700'>
