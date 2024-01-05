@@ -43,7 +43,7 @@ export default function Home() {
             </li>
           </ul>
           <p className='text-gray-700'>
-            Todo endpoint da{' '}
+            Os endpoints da{' '}
             <a
               className='underline'
               href='https://dadosabertos.camara.leg.br/swagger/api.html'
@@ -51,9 +51,7 @@ export default function Home() {
             >
               versão 2 dos dados abertos da Câmara
             </a>{' '}
-            funciona. Basta substituir{' '}
-            <span className='font-medium text-blue-500'>dadosabertos.camara.leg.br/api/v2/</span>{' '}
-            por <span className='font-medium text-blue-500'>congresso-json.vercel.app/camara/</span>
+            estão sem funcionar, provavelmente devido a um bloqueio de acesso da parte da Câmara.
           </p>
           <p className='text-gray-700'>
             Todo endpoint listado{' '}
